@@ -19,6 +19,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.alert import Alert
 
+from secret import ID, PASSWORD
+
 
 class JunoHairWebCrawler:
 
@@ -476,7 +478,7 @@ class JunoHairWebCrawler:
         self.get_site(
             'https://www.junohair.com/junohair/reservation/intro', '준오헤어')
 
-        self.login('ID', 'PASSWORD')
+        self.login(ID, PASSWORD)
 
         try:
             with open('config.json', 'r', encoding="UTF-8") as file:
