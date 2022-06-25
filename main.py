@@ -51,7 +51,7 @@ class JunoHairWebCrawler:
     def get_new_version_chrome_driver(self):
         chrome_ver = chromedriver_autoinstaller.get_chrome_version().split('.')[
             0]
-        driver_path = f'./chromedriver_{chrome_ver}/chromedriver.exe'
+        driver_path = f'./{chrome_ver}/chromedriver.exe'
         if os.path.exists(driver_path):
             print(f"chrom driver is insatlled: {driver_path}")
         else:
